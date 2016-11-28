@@ -1,4 +1,4 @@
-package bookmark
+package bookmark.util
 
 import slick.driver.H2Driver.api.Database
 
@@ -7,11 +7,11 @@ import slick.driver.H2Driver.api.Database
   */
 trait DatabaseConfig {
 
-  val db = Database.forConfig("h2")
+  val db = Database.forConfig("database")
 
   val driver = slick.driver.H2Driver
 
-  import driver.api.Session
+  import driver.api._
 
   implicit val session: Session = db.createSession()
 

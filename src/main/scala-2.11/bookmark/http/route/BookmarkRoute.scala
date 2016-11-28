@@ -1,7 +1,6 @@
 package bookmark.http.route
 
 import akka.http.scaladsl.server.Directives._
-import bookmark.model.Bookmark
 import bookmark.service.BookmarkService
 
 /**
@@ -12,9 +11,6 @@ trait BookmarkRoute extends BookmarkService {
     path("") {
       pathEndOrSingleSlash {
         get {
-          save(Bookmark(Option(1L), "네이버", "http://naver.com", "네이버"))
-          save(Bookmark(Option(1L), "네이버", "http://naver.com", "네이버"))
-          println(getBookmarks())
           complete {
             "Hello world"
           }
