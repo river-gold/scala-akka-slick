@@ -6,7 +6,7 @@ import bookmark.model.Bookmark
 /**
   * Created by yw on 16. 11. 28.
   */
-class BookmarkRepository extends DatabaseConfig {
+trait BookmarkRepository extends DatabaseConfig {
 
   import driver.api._
 

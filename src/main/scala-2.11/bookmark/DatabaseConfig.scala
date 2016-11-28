@@ -1,5 +1,7 @@
 package bookmark
 
+import slick.driver.H2Driver.api.Database
+
 /**
   * Created by yw on 16. 11. 28.
   */
